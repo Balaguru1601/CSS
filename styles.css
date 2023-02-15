@@ -1,0 +1,16 @@
+.carousel {
+	display: flex;
+	scroll-snap-type: X mandatory;
+	scroll-padding: 0 24px;
+	background-color: brown;
+	overflow: auto;
+}
+
+.carousel .item {
+	margin-right: 10px;
+	width: 200px;
+	height: 280px;
+	scroll-snap-align: start;
+	background-color: green;
+	flex-shrink: 0;
+}
