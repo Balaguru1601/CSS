@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Rotation</title>
+    <style>
+        .container {
+            /* height: 700px; */
+            background-color: #7db9b6;
+            /* margin-top: 5rem; */
+            padding: 50px;
+        }
+
+        .container .large-circle {
+            position: relative;
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            background-color: #e96479;
+            margin: 100px;
+        }
+
+        .container .small-circle {
+            position: absolute;
+            top: 175px;
+            left: 175px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #4d455d;
+            /* z-index: -1; */
+        }
+
+        .large-circle:hover .small-circle1 {
+            top: 0;
+            left: 0;
+            transition: all 0.5s ease;
+            z-index: 1;
+            animation: rotation1 2s linear 0.7s infinite;
+        }
+
+        .large-circle:hover .small-circle2 {
+            top: 0;
+            left: 350px;
+            /* right: 400px; */
+            background-color: #4d455d;
+            transition: all 0.5s ease;
+            z-index: 1;
+            animation: rotation2 2s linear 0.7s infinite;
+        }
+
+        .large-circle:hover .small-circle3 {
+            top: 350px;
+            left: 350px;
+            transition: all 0.5s ease;
+            z-index: 1;
+            animation: rotation3 2s linear 0.7s infinite;
+        }
+
+        .large-circle:hover .small-circle4 {
+            top: 350px;
+            left: 0px;
+            transition: all 0.5s ease;
+            z-index: 1;
+            animation: rotation4 2s linear 0.7s infinite;
+        }
+
+        @keyframes rotation1 {
+            0% {
+                top: 0;
+                left: 0;
+            }
+
+            25% {
+                top: 0;
+                left: 350px;
+            }
+
+            50% {
+                top: 350px;
+                left: 350px;
+            }
+
+            75% {
+                top: 350px;
+                left: 0;
+            }
+
+            100% {
+                top: 0;
+                left: 0;
+            }
+        }
+
+        @keyframes rotation2 {
+            0% {
+                top: 0;
+                left: 350px;
+            }
+
+            25% {
+                top: 350px;
+                left: 350px;
+            }
+
+            50% {
+                top: 350px;
+                left: 0;
+            }
+
+            75% {
+                top: 0;
+                left: 0;
+            }
+
+            100% {
+                top: 0;
+                left: 350px;
+            }
+        }
+
+        @keyframes rotation3 {
+            0% {
+                top: 350px;
+                left: 350px;
+            }
+
+            25% {
+                top: 350px;
+                left: 0;
+            }
+
+            50% {
+                top: 0;
+                left: 0;
+            }
+
+            75% {
+                top: 0;
+                left: 350px;
+            }
+
+            100% {
+                top: 350px;
+                left: 350px;
+            }
+        }
+
+        @keyframes rotation4 {
+            0% {
+                top: 350px;
+                left: 0;
+            }
+
+            25% {
+                top: 0;
+                left: 0;
+            }
+
+            50% {
+                top: 0;
+                left: 350px;
+            }
+
+            75% {
+                top: 350px;
+                left: 350px;
+            }
+
+            100% {
+                top: 350px;
+                left: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="container">
+        <div class="large-circle">
+            <div class="small-circle small-circle1"></div>
+            <div class="small-circle small-circle2 "></div>
+            <div class="small-circle small-circle3"></div>
+            <div class="small-circle small-circle4"></div>
+        </div>
+    </section>
+</body>
+
+</html>
